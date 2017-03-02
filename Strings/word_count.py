@@ -11,7 +11,7 @@ teststring="Wow I cannot believe this. This is me learning regex"
 #words=re.findall(r'\w+',passage)
 
 words=re.findall(r'\w+',teststring)
-
+print type(words)
 small_words=[]
 for word in words:
 	small_words.append(word.lower())
