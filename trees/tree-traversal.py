@@ -46,13 +46,13 @@ def inorder(root,result):
 
 #inorder(root,result)
 
-# right -> root -> left
+# left -> right -> root
 def postorder(root,result):
 	if not root:
 		return
+	postorder(root.left,result)
 	postorder(root.right,result)
 	result.append(root.data)
-	postorder(root.left,result)
 
 postorder(root,result)
 print result
